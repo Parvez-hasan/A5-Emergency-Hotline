@@ -113,6 +113,28 @@ function heardAdd (){
 
  // copy count
 
+ const copyCart = document.getElementById("copy-number-grow")
+ let copyCartCount = 0;
+
+ document.getElementById("contact-box").addEventListener("click", function(event){
+
+    if(event.target.closest(".copy-number")){
+
+        const numberCart = event.target.closest(".number-btn")
+        const hotlineNumbers = numberCart.querySelector("h2.number-count").innerText
+
+        navigator.clipboard.writeText(hotlineNumbers)
+
+        alert(`the number has been copied : ${hotlineNumbers}`)
+
+        copyCartCount ++
+        copyCart.innerText = copyCartCount
+    }
+
+
+
+ });
+
 
 
 
