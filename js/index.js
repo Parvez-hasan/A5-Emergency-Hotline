@@ -24,7 +24,7 @@ function heardAdd (){
 
         document.getElementById(btnAdd).addEventListener("click", function(){
 
-            const coinGrow = document.getElementById("coin-gro").innerText
+            const coinGrow = Number(document.getElementById("coin-gro").innerText);
 
             const headTi = document.getElementById(headTitle).innerText
             const impNumber = document.getElementById(numberAdd).innerText
@@ -35,7 +35,7 @@ function heardAdd (){
 
         }
         document.getElementById("coin-gro").innerText = coinGrow - 20
-         alert(`📞calling ${title} ${numberEmar}...`)
+         alert(`📞calling ${headTi} ${impNumber}...`)
 
          const callHistory ={
             callName : title,
@@ -44,10 +44,10 @@ function heardAdd (){
 
          }
 
-         allCall.push(callHistory);
+         allCalls.push(callHistory);
 
       const allCallHistory = document.getElementById("call-history")
-      allCallHistory.innerText = " "
+      allCallHistory.innerHTML = " "
 
       for(const callHistory of allCalls){
         const div = document.createElement('div')
