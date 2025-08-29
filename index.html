@@ -68,11 +68,10 @@
 
     <main class="bg-[#f5fff6]">
 
-        <section> </section>
-
         <section id="hotline-container" class="container mx-auto py-8 px-5 grid grid-cols-12 gap-5">
 
-            <section id="contact-box" class=" col-span-9 ">
+             <!--hotline section-->
+            <section id="contact-box" class=" col-span-12 lg:col-span-9 order-2 lg:order-1 ">
 
                 <!--contact box-1-->
 
@@ -282,8 +281,9 @@
 
             </section>
 
-            <div class="bg-white rounded-lg shadow-sm  col-span-3">
-                <div>
+               <!--call history section-->
+            <div class="bg-white rounded-lg shadow-sm  col-span-12 lg:col-span-3 order-1 lg:order-2">
+                
                     <div class="flex justify-between items-center mt-4 px-4">
                         <h2 class="text-xl font-semibold"><i class="fa-regular fa-clock w-6 h-6"></i> Call History</h2>
                         <button id="clear-button"
@@ -293,7 +293,7 @@
                     <div id="call-history" class="history-box mt-3 px-4">
                         
                     </div>
-                </div>
+                
             </div>
 
         </section>
