@@ -29,12 +29,12 @@ function heardAdd (){
 
         }
         document.getElementById("coin-gro").innerText = coinGrow - 20
-         alert(`📞calling ${headTi} ${impNumber}...`)
+         alert(`📞calling ${headTi}:- ${impNumber}...`)
 
          const callHistory ={
             callName : headTi,
             number : impNumber,
-            time : new Date().toLocaleTimeString()
+            time : new Date().toLocaleTimeString([], { hour : '2-digit', minute : '2-digit', hour12 : true })
 
          }
 
