@@ -26,8 +26,8 @@ function heardAdd (){
 
             const coinGrow = Number(document.getElementById("coin-gro").innerText);
 
-            const headTi = document.getElementById(headTitle).innerText
-            const impNumber = document.getElementById(numberAdd).innerText
+            const headTi = document.getElementById(headTitle).innerText;
+            const impNumber = document.getElementById(numberAdd).innerText;
 
         if(coinGrow < 20){
             alert ("❌You do not have enough coins. You need at least 20 coins to make a call")
@@ -46,25 +46,37 @@ function heardAdd (){
 
          allCalls.push(callHistory);
 
-      const allCallHistory = document.getElementById("call-history")
-      allCallHistory.innerHTML = " "
+         disHistory();
 
-      for(const callHistory of allCalls){
-        const div = document.createElement('div')
-        div.innerText = `
-            <div class="bg-[#f5fff6] flex justify-between items-center rounded-lg p-4">
+        });
+
+    }
+
+     function disHistory(){
+
+        const allCallHistory = document.getElementById("call-history");
+        allCallHistory.innerHTML = "";
+
+       for(const callHistory of allCalls) {
+        const div = document.createElement("div");
+
+        div.className =  "bg-[#f5fff6] flex justify-between items-center rounded-lg p-4 mb-2";
+        
+        div.innerHTML = `
+
                  <div>
-                   <h2 class="font-semibold">${callHistory.callName}</h2>
-                   <h4 class="text-gray-700">${callHistory.number}</h4>
+                     <h2 class="font-semibold">${callHistory.callName}</h2>
+                     <h4 class="text-gray-700">${callHistory.number}</h4>
                  </div>
 
                  <h2>${callHistory.time}</h2>
         
-           </div> `
-           allCallHistory.appendChild(div)
+         `
+
+           allCallHistory.appendChild(div);
+
       }
 
-        })
     };
 
     // all contact call button //
