@@ -9,12 +9,6 @@ function heardAdd (){
     
 };
 
-//document.getElementById("call-button").addEventListener('click', function(){
-
-//    alert("call button click")
-//})
-
-// Call Buttons //
 
    //function call button section
 
@@ -38,8 +32,8 @@ function heardAdd (){
          alert(`📞calling ${headTi} ${impNumber}...`)
 
          const callHistory ={
-            callName : title,
-            number : numberEmar,
+            callName : headTi,
+            number : impNumber,
             time : new Date().toLocaleTimeString()
 
          }
@@ -116,6 +110,8 @@ function heardAdd (){
 
 
  });
+
+ // copy count
 
 
 
